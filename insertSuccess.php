@@ -16,6 +16,6 @@
         echo "<script>alter('插入失败！')；</script>";
     }
 ?>
-<meta http-equiv="refresh" content="1； url=query.php">
+<meta http-equiv="refresh" content="1； url=querybook.php">
 
 
