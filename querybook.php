@@ -21,7 +21,7 @@
 <title>网上书店</title>
 </head>
 <body bgcolor="#f4f4f4">
-        <table width="100%" border="0" align="center">
+        <table width="100%" border="0" align="center"/>
 		<tr>
 			<td width="27%" height="68" rowspan="2">
 			    <img width="200" height="106" src="images/book_logo.jpg"/>
