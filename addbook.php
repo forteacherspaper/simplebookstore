@@ -5,23 +5,33 @@
     <meta http-equiv="Content-Type" content="text/html"  charset="utf-8"/>
     <title>新增书籍</title>
 </head>
-<body>
+<body bgcolor="#f4f4f4">
     <table width="100%" border="0" align="center">
         <tr>
-            <td colspan="4" align="center" ><h1>欢迎来到我们的网上书店</h1></td>
-        </tr>
-        <tr>
-            <td width="15%" height="20" align="left" valign="middle">
+            <td width="27%" height="68" rowspan="2">
+                
+            </td>
+	<td hight="68" colspan="4">
+            <font face="隶书" size="+4" color="#cccc00">网上书店</font>
+	</td>
+	<td width="10%" rowspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+            <td colspan="4" align="center">欢迎光临我们的网站</td>
+	</tr>
+	<tr>
+            <td width="15%" height="20%" align="left" valign="middle">
                 <a href="index.php">首页</a>
             </td>
-            <td width="15%" height="20" align="left" valign="middle">
-                <a href="allkooklist.php">所有图书</a>
+            <td width="15%" height="20%" align="left" valign="middle">
+                <a href="allbooklist.php">所有图书</a>
             </td>
-            <td width="15%" height="20" align="left" valign="middle">
-                <a href="insertbook.php">插入图书</a>
-            </td>
-            <td width="15%" height="20" align="left" valign="middle">
-                <a href="deletebook.php">编辑删除图书</a>
+            <td width="20%" height="20"><a href="allbooklist_pg.php">所有图书（分页）</a></td>
+            <td width="15%" height="20" align="left " valign="middle">
+                <a href="addbook.php">插入书籍</a>
+            </td>		   
+            <td width="20%" height="20" align="left " valign="middle">
+		<a href="deletebook.php">编辑删除书籍</a>
             </td>
         </tr>
         <tr>
@@ -70,6 +80,4 @@
         </tr>
     </table>
 </body>
-
-
 
