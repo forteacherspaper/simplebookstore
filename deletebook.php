@@ -1,6 +1,4 @@
-﻿这是删除图书信息页面
-这是闫静茹新增的一行文字
-<?php require_once('connections/conn.php'); ?>
+﻿<?php require_once('connections/conn.php'); ?>
 <?php
 mysqli_query($conn,'set names utf8');
 $query_book="select * from booktable";
