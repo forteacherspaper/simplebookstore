@@ -1,19 +1,21 @@
-<?php require_once('connections/conn.php'); ?>
+﻿<?php require_once('connections/conn.php'); ?>
 <?php 
-	if (insert($_GET['BookID'])) 
+	if (isset($_GET['BookID'])) {
 		$bookid=$_GET['BookID'];
+	}
 	else{
-		header('Location:deletebook.php');
+		header("Location:deletebook.php");
+		# code...
 	}
 	$query_book="delete from booktable where bookid=".$bookid;
-	$resault=mysql_query($conn,$query_book) or die(mysql_error($conn);
+	$resault=mysqli_query($conn,$query_book) or die(mysqli_error($conn));
 	mysqli_close($conn);
 	if($resault){
-		echo "<script>alert('ɾ���ɹ���');</script>";
+		echo "<script>alert('删除成功！');</script>";
 	}
 	else{
-		echo "<script>alert('ɾ��ʧ�ܣ�');</script>";
+		echo "<script>alert('删除失败！');</script>";
 	}
- ?>
- <meta http-equiv="refresh" content="1;url=deletebook.php">
-
+?>
+<meta http-equiv="refresh" content="1;url=deletebook.php">
+ 
