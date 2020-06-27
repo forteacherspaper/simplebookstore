@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>网上书店</title>
-</head>
+</head> 
 <body bgcolor="#f4f4f4">
 	<table width="100%" border="0" align="center">
 		<tr>
