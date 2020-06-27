@@ -1,5 +1,4 @@
-
-<?php require_once 'connections/conn.php;?'>
+<?php require_once 'connections/conn.php;' ?>
 <?php
 if(insert($_GET[BookID]))
     $bookid=$_GET[BookID];
