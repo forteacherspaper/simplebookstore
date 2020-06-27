@@ -16,7 +16,7 @@
         echo "<script>alert('插入失败！');</script>";
     }
 ?>
-<meta http-equiv="refresh" content="1;url=allbooklist.php">
+<meta http-equiv="refresh" content="1;url=addbook.php">
 
 
 
