@@ -5,7 +5,7 @@
 	 $colname_BookInfo="-1";
 	 if(isset($_POST['BookType'])){
 		 $colname_BookInfo=$_POST['BookType'];
-	 }
+	 } 
 	 //sprintf函数生成字符串
 	 $query_BookInfo=sprintf("select * from booktable where booktype=%s",$colname_BookInfo);
 	 mysqli_query($conn,"set names 'utf8'");//设置字符编码格式
