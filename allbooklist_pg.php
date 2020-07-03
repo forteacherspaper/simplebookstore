@@ -9,7 +9,7 @@ MySQLi_query($conn,"set names 'utf8'");
 $query_Book="select * from booktable";
 $all_Book= mysqli_query($conn, $query_Book);
 $totalRows= mysqli_num_rows($all_Book);
-$totalPages=ceil($totalRows);
+$totalPages=ceil($totalRows/$pageRows);
 //
 if($page<1) $page=1;
 if($page>$totalPages) $page=$totalPages;
@@ -81,7 +81,9 @@ $row_Book= mysqli_fetch_assoc($Book);
 								<?php
 								    if($page==1)echo "首页";
 								    else{
-								        echo <a href='allbooklist_pg.php?page=1'>首页</a>        
+								        echo "<a href='allbooklist_pg.php?page=1'>首页</a>";
+									}
+								?>
 			                </td>
 							  <td colspan="2">
 								<?php
@@ -89,6 +91,7 @@ $row_Book= mysqli_fetch_assoc($Book);
 								       else{
 								       $newpage=$page-1;
 								       echo "<a href='allbooklist_pg.php?page={$newpage}'>上一页</a>";
+									   }
 								?>
 							 </td>
                				 <td>
@@ -97,6 +100,7 @@ $row_Book= mysqli_fetch_assoc($Book);
 							   			 else{
 									        $newpage=$page+1;
 									        echo "<a href='allbooklist_pg.php?page={$newpage}'>下一页</a>";
+										 }
 								?>
 			                </td>
 			                <td>
@@ -105,6 +109,7 @@ $row_Book= mysqli_fetch_assoc($Book);
 								   else{
 								        $newpage=$totalPages;
 								        echo "<a href='allbooklist_pg.php?page={$newpage}'>尾页</a>";
+								   }
 								?>
              </td>
             </tr>
@@ -121,5 +126,3 @@ $row_Book= mysqli_fetch_assoc($Book);
 			
     </body>
     </html>
-
-
