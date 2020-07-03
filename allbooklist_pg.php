@@ -60,14 +60,14 @@ $row_Book= mysqli_fetch_assoc($Book);
 			<tr>
         		<td colspan="5" align="center">书店所有图书</td>>
             </tr>
-            <tr valign="middle" height="50">
+            <tr valign="middle" height="20">
                                 <td align="center">书名</td>
                                 <td align="center">作者</td>
                                 <td align="center" colspan="2">图书类型</td>
                                 <td align="center">图书价格</td>
             </tr>
                             <?php do{ ?>
-                            <tr valign="middle" align="center" height="50">
+                            <tr valign="middle" align="center" height="20">
                                 <td><?php echo $row_Book['bookname']; ?></td>
                                 <td><?php echo $row_Book['bookauthor'];?></td>
                                 <td><?php echo $row_Book['booktype'];?></td>
@@ -77,15 +77,13 @@ $row_Book= mysqli_fetch_assoc($Book);
                             ?>
             
                        	  <tr align="center">
-							 <td >
+							 <td  colspan="4">
 								<?php
 								    if($page==1)echo "首页";
 								    else{
 								        echo "<a href='allbooklist_pg.php?page=1'>首页</a>";
 									}
 								?>
-			                </td>
-							  <td colspan="2">
 								<?php
 								   if($page==1) echo "上一页";
 								       else{
@@ -93,8 +91,6 @@ $row_Book= mysqli_fetch_assoc($Book);
 								       echo "<a href='allbooklist_pg.php?page={$newpage}'>上一页</a>";
 									   }
 								?>
-							 </td>
-               				 <td>
 								<?php 
 									if($page==$totalPages) echo "下一页";
 							   			 else{
@@ -102,8 +98,6 @@ $row_Book= mysqli_fetch_assoc($Book);
 									        echo "<a href='allbooklist_pg.php?page={$newpage}'>下一页</a>";
 										 }
 								?>
-			                </td>
-			                <td>
 								<?php
 								   if($page==$totalPages) echo "尾页";
 								   else{
