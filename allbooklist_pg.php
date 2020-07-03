@@ -18,6 +18,8 @@ $startRow=($page-1)*$pageRows;
 $query_limit= sprintf("%s limit %d,%d",$query_Book,$startRow,$pageRows);
 $Book= mysqli_query($conn, $query_limit) or die(mysqli_errno($conn));
 $row_Book= mysqli_fetch_assoc($Book);
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
          "http://www.w3.org/TR/xhtml-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -86,21 +88,24 @@ $row_Book= mysqli_fetch_assoc($Book);
 								   if($page==1) echo "上一页";
 								       else{
 								       $newpage=$page-1;
-								       echo <a href='allbooklist_pg.php?page={$newpage}'>上一页</a>
+								       echo "<a href='allbooklist_pg.php?page={$newpage}'>上一页</a>";
+								?>
 							 </td>
                				 <td>
 								<?php 
 									if($page==$totalPages) echo "下一页";
 							   			 else{
 									        $newpage=$page+1;
-									        echo <a href='allbooklist_pg.php?page={$newpage}'>下一页</a>
+									        echo "<a href='allbooklist_pg.php?page={$newpage}'>下一页</a>";
+								?>
 			                </td>
 			                <td>
 								<?php
 								   if($page==$totalPages) echo "尾页";
 								   else{
 								        $newpage=$totalPages;
-								        echo <a href='allbooklist_pg.php?page={$newpage}'>尾页</a>
+								        echo "<a href='allbooklist_pg.php?page={$newpage}'>尾页</a>";
+								?>
              </td>
             </tr>
             <tr>
