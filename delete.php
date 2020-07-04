@@ -1,4 +1,4 @@
-﻿<?php require_once('connections/conn.php'); ?>
+﻿﻿<?php require_once('connections/conn.php'); ?>
 <?php 
 	if (isset($_GET['BookID'])) {
 		$bookid=$_GET['BookID'];
@@ -17,5 +17,5 @@
 		echo "<script>alert('删除失败！');</script>";
 	}
 ?>
+
 <meta http-equiv="refresh" content="1;url=deletebook.php">
- 
